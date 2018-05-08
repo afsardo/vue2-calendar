@@ -84,7 +84,7 @@ const dateOccursIn = (date, daysObj) => {
 
   if (daysObj.to && date < daysObj.to) return true;
   if (daysObj.from && date > daysObj.from) return true;
-  if (daysObj.days && daysObj.days.indexOf(date.getDay) !== -1) return true;
+  if (daysObj.days && daysObj.days.indexOf(date.getDay()) !== -1) return true;
 };
 
 export default {
