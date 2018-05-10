@@ -7,9 +7,10 @@
       @click.stop="eventClicked(event)"
       v-for="(event, index) in eventList"
     >
-      <div class="event-title">
+      <div v-if="event.title" class="event-title">
         {{ event.title }}
       </div>
+      <div v-if="event.html" v-html="event.html"></div>
     </div>
     <span v-if="more" class="more-link" @click.stop="showAll()">
       {{ showMoreLabel }}
