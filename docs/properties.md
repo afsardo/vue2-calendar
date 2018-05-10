@@ -23,7 +23,8 @@ Events to be displayed on the calendar.
     start    : Date,
     end      : Date,
     title    : 'FooEvent',
-    class    : 'testClass'
+    html     : `<strong>BoldEvent</strong>`,         // Only displayed if no title is defined
+    class    : 'testClass'
   },
 ]
 ```
