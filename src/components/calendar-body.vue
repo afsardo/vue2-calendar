@@ -80,7 +80,8 @@ export default {
         saturday: day.isSaturday,
         'not-current': !day.isCurrentMonth,
         disabled: this.isDayDisabled(day),
-        highlighted: this.isDayHighlighted(day)
+        highlighted: this.isDayHighlighted(day),
+        'has-events': this.getEventsForDay(day.date).length > 0,
       };
 
       return Object.keys(classes).filter(key => classes[key] === true);
